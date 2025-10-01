@@ -25,7 +25,7 @@ export default function HeroSection() {
 
   return (
     <section className="hero-section" style={{
-      background: 'linear-gradient(135deg, var(--primary-base) 0%, #1C7CED 100%)',
+      background: 'linear-gradient(135deg, #4D9CFD 0%, #6BB6FF 100%)',
       position: 'relative',
       padding: '6rem 0',
       color: 'var(--white)',

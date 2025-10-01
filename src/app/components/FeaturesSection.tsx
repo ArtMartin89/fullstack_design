@@ -57,11 +57,11 @@ export default function FeaturesSection() {
           }} />
         </div>
 
-        <div style={{
+        <div className="features-grid" style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+          gridTemplateColumns: 'repeat(4, 1fr)',
           gap: '2rem',
-          maxWidth: '1000px',
+          maxWidth: '1200px',
           margin: '0 auto'
         }}>
           {features.map((feature, index) => (

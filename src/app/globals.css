@@ -243,9 +243,26 @@ p {
     padding: 1.5rem !important;
   }
   
+  
+  /* Features section responsive */
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
   /* Timeline responsive */
-  .timeline-mobile {
-    display: block !important;
+  .timeline-mobile .timeline-item {
+    flex-direction: row !important;
+  }
+  
+  .timeline-mobile .timeline-content {
+    width: calc(100% - 60px) !important;
+    margin-left: 60px !important;
+    padding: 0 !important;
+  }
+  
+  .timeline-mobile .timeline-dot {
+    left: 20px !important;
+    transform: translate(-50%, -50%) !important;
   }
   
   .timeline-mobile .timeline-line {
@@ -253,14 +270,31 @@ p {
     transform: none !important;
   }
   
-  .timeline-mobile .timeline-dot {
-    left: 20px !important;
-    transform: translateY(-50%) !important;
+  /* Hero carousel responsive */
+  .hero-carousel h1 {
+    font-size: 2rem !important;
   }
   
-  .timeline-mobile .timeline-content {
-    width: calc(100% - 60px) !important;
-    margin-left: 60px !important;
-    padding: 0 !important;
+  .hero-carousel p {
+    font-size: 1.1rem !important;
+  }
+  
+  .hero-carousel .btn-primary {
+    padding: 0.8rem 1.5rem !important;
+    font-size: 1rem !important;
+  }
+  
+  .hero-carousel button[style*="left: 2rem"] {
+    left: 1rem !important;
+  }
+  
+  .hero-carousel button[style*="right: 2rem"] {
+    right: 1rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .features-grid {
+    grid-template-columns: 1fr !important;
   }
 }

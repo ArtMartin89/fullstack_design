@@ -47,13 +47,13 @@ export default function TimelineSection() {
           </h3>
         </div>
 
-        <div style={{
+        <div className="timeline-mobile" style={{
           position: 'relative',
-          maxWidth: '800px',
+          maxWidth: '100%',
           margin: '0 auto'
         }}>
           {/* Timeline line */}
-          <div style={{
+          <div className="timeline-line" style={{
             position: 'absolute',
             left: '50%',
             top: 0,
@@ -65,15 +65,15 @@ export default function TimelineSection() {
           }} />
 
           {timelineSteps.map((step, index) => (
-            <div key={index} style={{
+            <div key={index} className="timeline-item" style={{
               display: 'flex',
               alignItems: 'center',
-              marginBottom: '3rem',
+              marginBottom: '2rem',
               position: 'relative',
               flexDirection: step.reverse ? 'row-reverse' : 'row'
             }}>
               {/* Timeline dot */}
-              <div style={{
+              <div className="timeline-dot" style={{
                 position: 'absolute',
                 left: '50%',
                 top: '50%',
@@ -87,14 +87,15 @@ export default function TimelineSection() {
                 zIndex: 2
               }} />
 
-              {/* Content */}
-              <div style={{
-                width: '45%',
+              {/* Content - full width of half */}
+              <div className="timeline-content" style={{
+                width: 'calc(50% - 20px)',
                 padding: step.reverse ? '0 0 0 2rem' : '0 2rem 0 0'
               }}>
                 <div className="card" style={{
-                  padding: '1.5rem',
-                  position: 'relative'
+                  padding: '2rem',
+                  position: 'relative',
+                  width: '100%'
                 }}>
                   <div style={{
                     fontSize: '0.875rem',
@@ -126,7 +127,7 @@ export default function TimelineSection() {
               </div>
 
               {/* Empty space for alignment */}
-              <div style={{ width: '45%' }} />
+              <div style={{ width: 'calc(50% - 20px)' }} />
             </div>
           ))}
         </div>

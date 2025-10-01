@@ -1,4 +1,4 @@
-import HeroSection from './components/HeroSection';
+import HeroCarousel from './components/HeroCarousel';
 import FeaturesSection from './components/FeaturesSection';
 import TimelineSection from './components/TimelineSection';
 import FAQSection from './components/FAQSection';
@@ -8,7 +8,7 @@ import Footer from './components/Footer';
 export default function Home() {
   return (
     <main>
-      <HeroSection />
+      <HeroCarousel />
       <FeaturesSection />
       <TimelineSection />
       <FAQSection />
