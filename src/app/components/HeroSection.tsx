@@ -78,8 +78,7 @@ export default function HeroSection() {
               fontSize: '1.1rem',
               lineHeight: 1.6,
               color: 'var(--white)',
-              marginBottom: '2rem',
-              opacity: 0.9
+              marginBottom: '2rem'
             }}>
               <p style={{ marginBottom: '1rem' }}>Примеры автоматизаций:</p>
               <ul style={{ 
