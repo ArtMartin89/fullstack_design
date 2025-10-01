@@ -132,30 +132,6 @@ export default function TimelineSection() {
         </div>
       </div>
 
-      {/* Mobile responsive styles */}
-      <style jsx>{`
-        @media (max-width: 768px) {
-          .timeline-mobile {
-            display: block !important;
-          }
-          
-          .timeline-mobile .timeline-line {
-            left: 20px !important;
-            transform: none !important;
-          }
-          
-          .timeline-mobile .timeline-dot {
-            left: 20px !important;
-            transform: translateY(-50%) !important;
-          }
-          
-          .timeline-mobile .timeline-content {
-            width: calc(100% - 60px) !important;
-            margin-left: 60px !important;
-            padding: 0 !important;
-          }
-        }
-      `}</style>
     </section>
   );
 }

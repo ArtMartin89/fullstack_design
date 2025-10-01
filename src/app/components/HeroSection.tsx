@@ -200,23 +200,6 @@ export default function HeroSection() {
         </div>
       </div>
       
-      {/* Responsive styles */}
-      <style jsx>{`
-        @media (max-width: 768px) {
-          .hero-content {
-            grid-template-columns: 1fr !important;
-            gap: 2rem !important;
-          }
-          
-          .hero-text h1 {
-            font-size: 2rem !important;
-          }
-          
-          .hero-form {
-            padding: 1.5rem !important;
-          }
-        }
-      `}</style>
     </section>
   );
 }
