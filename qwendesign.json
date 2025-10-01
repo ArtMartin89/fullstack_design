@@ -1,0 +1,460 @@
+{
+    "designSystem": {
+      "name": "Techno Design System",
+      "version": "1.0",
+      "description": "A modern, blue-centric design system for corporate and IT service websites, emphasizing clarity, hierarchy, and interactive feedback through consistent color, typography, and component styling.",
+      "colorPalette": {
+        "primary": {
+          "base": "#0D6EFD",
+          "light": "#4D9CFD",
+          "dark": "#0B5ED7",
+          "hover": "#0B5ED7",
+          "active": "#0A58DA",
+          "disabled": "#A5C5F7"
+        },
+        "secondary": {
+          "base": "#6C757D",
+          "light": "#8A9298",
+          "dark": "#52595F"
+        },
+        "neutral": {
+          "white": "#FFFFFF",
+          "lightGray": "#F8F9FA",
+          "gray": "#E9ECEF",
+          "darkGray": "#343A40",
+          "black": "#000000"
+        },
+        "accent": {
+          "blueGradientStart": "#0D6EFD",
+          "blueGradientEnd": "#1C7CED"
+        },
+        "text": {
+          "primary": "#212529",
+          "secondary": "#6C757D",
+          "inverse": "#FFFFFF",
+          "muted": "#6C757D"
+        },
+        "background": {
+          "page": "#FFFFFF",
+          "cardPrimary": "#0D6EFD",
+          "cardSecondary": "#FFFFFF",
+          "heroOverlay": "rgba(0, 0, 0, 0.5)"
+        },
+        "border": {
+          "default": "#DEE2E6",
+          "focus": "#86B7FE",
+          "divider": "#CED4DA"
+        },
+        "shadow": {
+          "card": "0 4px 12px rgba(0, 0, 0, 0.08)",
+          "buttonHover": "0 2px 8px rgba(13, 110, 253, 0.2)",
+          "inputFocus": "0 0 0 4px rgba(13, 110, 253, 0.25)"
+        }
+      },
+      "typography": {
+        "fontFamily": "Inter, sans-serif",
+        "headings": {
+          "h1": {
+            "fontSize": "2.5rem",
+            "fontWeight": 700,
+            "lineHeight": 1.2,
+            "color": "#212529",
+            "mobile": {
+              "fontSize": "2rem"
+            }
+          },
+          "h2": {
+            "fontSize": "2rem",
+            "fontWeight": 700,
+            "lineHeight": 1.3,
+            "color": "#212529",
+            "mobile": {
+              "fontSize": "1.75rem"
+            }
+          },
+          "h3": {
+            "fontSize": "1.75rem",
+            "fontWeight": 600,
+            "lineHeight": 1.4,
+            "color": "#212529"
+          },
+          "h4": {
+            "fontSize": "1.5rem",
+            "fontWeight": 600,
+            "lineHeight": 1.5,
+            "color": "#212529"
+          },
+          "h5": {
+            "fontSize": "1.25rem",
+            "fontWeight": 500,
+            "lineHeight": 1.6,
+            "color": "#212529"
+          },
+          "h6": {
+            "fontSize": "1rem",
+            "fontWeight": 500,
+            "lineHeight": 1.7,
+            "color": "#212529"
+          }
+        },
+        "body": {
+          "regular": {
+            "fontSize": "1rem",
+            "fontWeight": 400,
+            "lineHeight": 1.6,
+            "color": "#212529"
+          },
+          "small": {
+            "fontSize": "0.875rem",
+            "fontWeight": 400,
+            "lineHeight": 1.5,
+            "color": "#6C757D"
+          },
+          "large": {
+            "fontSize": "1.25rem",
+            "fontWeight": 400,
+            "lineHeight": 1.6,
+            "color": "#212529"
+          }
+        },
+        "labels": {
+          "section": {
+            "fontSize": "0.875rem",
+            "fontWeight": 600,
+            "lineHeight": 1.5,
+            "color": "#0D6EFD",
+            "letterSpacing": "0.1em",
+            "textTransform": "uppercase"
+          }
+        }
+      },
+      "spacing": {
+        "unit": "0.25rem",
+        "xs": "0.5rem",
+        "sm": "1rem",
+        "md": "1.5rem",
+        "lg": "2rem",
+        "xl": "3rem",
+        "xxl": "4rem"
+      },
+      "borderRadius": {
+        "none": "0",
+        "sm": "0.25rem",
+        "md": "0.5rem",
+        "lg": "0.75rem",
+        "full": "9999px"
+      },
+      "components": {
+        "navbar": {
+          "backgroundColor": "#FFFFFF",
+          "boxShadow": "0 2px 4px rgba(0, 0, 0, 0.05)",
+          "logo": {
+            "color": "#0D6EFD",
+            "height": "40px"
+          },
+          "menuItems": {
+            "textColor": "#212529",
+            "hoverTextColor": "#0D6EFD",
+            "fontSize": "1rem",
+            "fontWeight": 500,
+            "padding": "0.75rem 1rem",
+            "dropdownIndicator": {
+              "color": "#6C757D",
+              "size": "0.5rem"
+            }
+          },
+          "ctaButton": {
+            "backgroundColor": "#0D6EFD",
+            "textColor": "#FFFFFF",
+            "borderRadius": "0.5rem",
+            "padding": "0.75rem 1.5rem",
+            "hoverBackgroundColor": "#0B5ED7",
+            "hoverTextColor": "#FFFFFF",
+            "focusOutline": "4px solid #86B7FE"
+          }
+        },
+        "heroSection": {
+          "backgroundImage": {
+            "overlay": "rgba(0, 0, 0, 0.5)"
+          },
+          "heading": {
+            "color": "#FFFFFF",
+            "fontSize": "3rem",
+            "fontWeight": 800,
+            "lineHeight": 1.2
+          },
+          "subheading": {
+            "color": "#FFFFFF",
+            "fontSize": "1.25rem",
+            "fontWeight": 400,
+            "lineHeight": 1.6
+          },
+          "playButton": {
+            "backgroundColor": "#FFFFFF",
+            "iconColor": "#0D6EFD",
+            "borderRadius": "50%",
+            "size": "60px",
+            "hoverBackgroundColor": "#F8F9FA"
+          },
+          "formContainer": {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": "0.75rem",
+            "boxShadow": "0 8px 24px rgba(0, 0, 0, 0.1)",
+            "padding": "2rem"
+          },
+          "formInput": {
+            "backgroundColor": "#F8F9FA",
+            "borderColor": "#DEE2E6",
+            "borderRadius": "0.5rem",
+            "padding": "0.75rem 1rem",
+            "focusBorderColor": "#0D6EFD",
+            "focusBoxShadow": "0 0 0 4px rgba(13, 110, 253, 0.25)"
+          },
+          "formSubmitButton": {
+            "backgroundColor": "#0D6EFD",
+            "textColor": "#FFFFFF",
+            "borderRadius": "0.5rem",
+            "padding": "0.75rem 1.5rem",
+            "hoverBackgroundColor": "#0B5ED7",
+            "width": "100%"
+          }
+        },
+        "statCard": {
+          "container": {
+            "backgroundColor": "linear-gradient(135deg, #0D6EFD 0%, #1C7CED 100%)",
+            "borderRadius": "0.5rem",
+            "padding": "1.5rem",
+            "boxShadow": "0 4px 12px rgba(0, 0, 0, 0.08)",
+            "textAlign": "center"
+          },
+          "number": {
+            "color": "#FFFFFF",
+            "fontSize": "2.5rem",
+            "fontWeight": 700,
+            "lineHeight": 1.2
+          },
+          "label": {
+            "color": "#FFFFFF",
+            "fontSize": "1rem",
+            "fontWeight": 400,
+            "lineHeight": 1.5,
+            "opacity": 0.85
+          },
+          "divider": {
+            "color": "rgba(255, 255, 255, 0.2)",
+            "width": "1px",
+            "height": "50%",
+            "margin": "0 1rem"
+          }
+        },
+        "serviceCard": {
+          "container": {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": "0.75rem",
+            "padding": "2rem",
+            "boxShadow": "0 4px 12px rgba(0, 0, 0, 0.08)",
+            "transition": "transform 0.2s ease, box-shadow 0.2s ease",
+            "hover": {
+              "transform": "translateY(-4px)",
+              "boxShadow": "0 8px 24px rgba(0, 0, 0, 0.1)"
+            }
+          },
+          "iconContainer": {
+            "backgroundColor": "#FFFFFF",
+            "border": "2px solid #0D6EFD",
+            "borderRadius": "0.5rem",
+            "padding": "1rem",
+            "width": "60px",
+            "height": "60px",
+            "display": "flex",
+            "alignItems": "center",
+            "justifyContent": "center",
+            "iconColor": "#0D6EFD"
+          },
+          "title": {
+            "color": "#212529",
+            "fontSize": "1.5rem",
+            "fontWeight": 600,
+            "lineHeight": 1.4
+          },
+          "description": {
+            "color": "#6C757D",
+            "fontSize": "1rem",
+            "fontWeight": 400,
+            "lineHeight": 1.6,
+            "marginTop": "1rem"
+          },
+          "actionLink": {
+            "color": "#0D6EFD",
+            "fontSize": "0.875rem",
+            "fontWeight": 500,
+            "textDecoration": "none",
+            "hoverColor": "#0B5ED7",
+            "afterIcon": {
+              "color": "#0D6EFD",
+              "marginLeft": "0.5rem"
+            }
+          }
+        },
+        "highlightedServiceCard": {
+          "container": {
+            "backgroundColor": "#0D6EFD",
+            "borderRadius": "0.75rem",
+            "padding": "2rem",
+            "boxShadow": "0 4px 12px rgba(0, 0, 0, 0.08)",
+            "transition": "transform 0.2s ease, box-shadow 0.2s ease",
+            "hover": {
+              "transform": "translateY(-4px)",
+              "boxShadow": "0 8px 24px rgba(0, 0, 0, 0.1)"
+            }
+          },
+          "iconContainer": {
+            "backgroundColor": "#FFFFFF",
+            "border": "2px solid #0D6EFD",
+            "borderRadius": "0.5rem",
+            "padding": "1rem",
+            "width": "60px",
+            "height": "60px",
+            "display": "flex",
+            "alignItems": "center",
+            "justifyContent": "center",
+            "iconColor": "#0D6EFD"
+          },
+          "title": {
+            "color": "#FFFFFF",
+            "fontSize": "1.5rem",
+            "fontWeight": 600,
+            "lineHeight": 1.4
+          },
+          "description": {
+            "color": "#FFFFFF",
+            "fontSize": "1rem",
+            "fontWeight": 400,
+            "lineHeight": 1.6,
+            "marginTop": "1rem",
+            "opacity": 0.9
+          },
+          "actionLink": {
+            "color": "#FFFFFF",
+            "fontSize": "0.875rem",
+            "fontWeight": 500,
+            "textDecoration": "none",
+            "hoverColor": "#FFFFFF",
+            "afterIcon": {
+              "color": "#FFFFFF",
+              "marginLeft": "0.5rem"
+            }
+          }
+        },
+        "blogCard": {
+          "container": {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": "0.75rem",
+            "overflow": "hidden",
+            "boxShadow": "0 4px 12px rgba(0, 0, 0, 0.08)"
+          },
+          "image": {
+            "width": "100%",
+            "height": "200px",
+            "objectFit": "cover"
+          },
+          "categoryBadge": {
+            "backgroundColor": "#0D6EFD",
+            "color": "#FFFFFF",
+            "borderRadius": "0.25rem",
+            "padding": "0.25rem 0.5rem",
+            "fontSize": "0.75rem",
+            "fontWeight": 600,
+            "position": "absolute",
+            "top": "1rem",
+            "left": "1rem"
+          },
+          "content": {
+            "padding": "1.5rem"
+          },
+          "title": {
+            "color": "#212529",
+            "fontSize": "1.25rem",
+            "fontWeight": 600,
+            "lineHeight": 1.4,
+            "marginTop": "0.5rem"
+          },
+          "excerpt": {
+            "color": "#6C757D",
+            "fontSize": "1rem",
+            "fontWeight": 400,
+            "lineHeight": 1.6,
+            "marginTop": "0.5rem"
+          }
+        },
+        "sectionHeader": {
+          "label": {
+            "color": "#0D6EFD",
+            "fontSize": "0.875rem",
+            "fontWeight": 600,
+            "letterSpacing": "0.1em",
+            "textTransform": "uppercase"
+          },
+          "title": {
+            "color": "#212529",
+            "fontSize": "2.5rem",
+            "fontWeight": 700,
+            "lineHeight": 1.2,
+            "marginTop": "0.5rem"
+          },
+          "divider": {
+            "backgroundColor": "#0D6EFD",
+            "height": "4px",
+            "width": "60px",
+            "borderRadius": "2px",
+            "marginTop": "1rem"
+          }
+        },
+        "ctaButton": {
+          "backgroundColor": "#0D6EFD",
+          "textColor": "#FFFFFF",
+          "borderRadius": "50px",
+          "padding": "0.75rem 1.5rem",
+          "fontSize": "1rem",
+          "fontWeight": 500,
+          "hoverBackgroundColor": "#0B5ED7",
+          "hoverTextColor": "#FFFFFF",
+          "focusOutline": "4px solid #86B7FE",
+          "arrowIcon": {
+            "color": "#FFFFFF",
+            "marginLeft": "0.5rem"
+          }
+        },
+        "backToTopButton": {
+          "backgroundColor": "#0D6EFD",
+          "color": "#FFFFFF",
+          "borderRadius": "50%",
+          "width": "50px",
+          "height": "50px",
+          "display": "flex",
+          "alignItems": "center",
+          "justifyContent": "center",
+          "boxShadow": "0 4px 12px rgba(0, 0, 0, 0.1)",
+          "hoverBackgroundColor": "#0B5ED7"
+        }
+      },
+      "rules": {
+        "doNotUse": [
+          "NEVER apply the blue gradient to icons or text elements. Gradient is ONLY for card backgrounds and hero sections.",
+          "NEVER use primary button colors (e.g., #0D6EFD) for body text. Use text.primary (#212529) or text.secondary (#6C757D).",
+          "NEVER apply shadows to text or small icons. Shadows are reserved for cards, buttons, and form containers.",
+          "NEVER use rounded corners of 0.25rem on large cards; use 0.75rem for all major containers.",
+          "NEVER use white background for primary action cards; reserve white for secondary cards and forms.",
+          "NEVER use the same icon color as the container background; always ensure contrast (e.g., blue icon on white container, white icon on blue container).",
+          "NEVER omit the focus outline on interactive elements like buttons and inputs. Always use 4px solid #86B7FE."
+        ],
+        "contextualRules": [
+          "All card containers MUST have a box-shadow of '0 4px 12px rgba(0, 0, 0, 0.08)' by default.",
+          "All primary CTA buttons MUST use the primary blue (#0D6EFD) with white text and a hover state that darkens to #0B5ED7.",
+          "All section headers MUST include a label in uppercase blue text, followed by a title and a blue divider bar.",
+          "All input fields MUST have a light gray background (#F8F9FA) and a subtle border (#DEE2E6), with a focused state that adds a blue outline.",
+          "All service cards MUST contain an icon inside a bordered container with padding, ensuring the icon is centered and has sufficient contrast against its background."
+        ]
+      }
+    }
+  }

@@ -1,8 +1,19 @@
+import HeroSection from './components/HeroSection';
+import FeaturesSection from './components/FeaturesSection';
+import TimelineSection from './components/TimelineSection';
+import FAQSection from './components/FAQSection';
+import CTASection from './components/CTASection';
+import Footer from './components/Footer';
+
 export default function Home() {
   return (
-    <div>
-      <h1>Проект без дизайна </h1>
-      <p>Пока тут пусто</p>
-    </div>
+    <main>
+      <HeroSection />
+      <FeaturesSection />
+      <TimelineSection />
+      <FAQSection />
+      <CTASection />
+      <Footer />
+    </main>
   );
 }
