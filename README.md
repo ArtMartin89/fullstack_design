@@ -1,36 +1,164 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AutoSapiens - Автоматизация бизнес-процессов
 
-## Getting Started
+Современный сайт для компании AutoSapiens, предоставляющей услуги автоматизации бизнес-процессов с помощью искусственного интеллекта.
 
-First, run the development server:
+## 🚀 Технологии
+
+- **Next.js 15.5.4** - React фреймворк
+- **TypeScript** - типизация
+- **Tailwind CSS v4** - стилизация
+- **React 19** - последняя версия
+
+## 📋 Требования
+
+- Node.js 18.17 или выше
+- npm, yarn, pnpm или bun
+
+## 🛠️ Установка и запуск
+
+### Разработка
 
 ```bash
+# Установка зависимостей
+npm install
+
+# Запуск в режиме разработки
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Откройте [http://localhost:3000](http://localhost:3000) в браузере.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Production сборка
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# Создание production сборки
+npm run build
 
-## Learn More
+# Запуск production сервера
+npm start
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 🌐 Развертывание
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Vercel (Рекомендуется)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Создайте аккаунт на [Vercel](https://vercel.com)
+2. Подключите ваш GitHub репозиторий
+3. Vercel автоматически определит Next.js проект
+4. Нажмите "Deploy"
 
-## Deploy on Vercel
+### Netlify
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Создайте аккаунт на [Netlify](https://netlify.com)
+2. Подключите репозиторий
+3. Настройте команды сборки:
+   - Build command: `npm run build`
+   - Publish directory: `.next`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Docker
+
+```bash
+# Создание Docker образа
+docker build -t autosapiens .
+
+# Запуск контейнера
+docker run -p 3000:3000 autosapiens
+```
+
+### VPS/Dedicated сервер
+
+```bash
+# Установка зависимостей
+npm install
+
+# Сборка проекта
+npm run build
+
+# Установка PM2 для управления процессом
+npm install -g pm2
+
+# Запуск приложения
+pm2 start npm --name "autosapiens" -- start
+
+# Сохранение конфигурации PM2
+pm2 save
+pm2 startup
+```
+
+### Nginx конфигурация (для VPS)
+
+```nginx
+server {
+    listen 80;
+    server_name yourdomain.com;
+
+    location / {
+        proxy_pass http://localhost:3000;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
+```
+
+## 📁 Структура проекта
+
+```
+.
+├── src/
+│   └── app/
+│       ├── components/        # React компоненты
+│       │   ├── HeroCarousel.tsx
+│       │   ├── FeaturesSection.tsx
+│       │   ├── TimelineSection.tsx
+│       │   ├── FAQSection.tsx
+│       │   ├── CTASection.tsx
+│       │   └── Footer.tsx
+│       ├── globals.css       # Глобальные стили
+│       ├── layout.tsx        # Основной layout
+│       └── page.tsx          # Главная страница
+├── public/                   # Статические файлы
+├── next.config.ts           # Конфигурация Next.js
+├── tsconfig.json            # Конфигурация TypeScript
+└── package.json             # Зависимости проекта
+```
+
+## 🎨 Компоненты сайта
+
+- **HeroCarousel** - Карусель с примерами автоматизаций
+- **FeaturesSection** - Секция преимуществ
+- **TimelineSection** - Процесс внедрения
+- **FAQSection** - Часто задаваемые вопросы
+- **CTASection** - Призыв к действию
+- **Footer** - Подвал сайта
+
+## 🔧 Настройка
+
+### Изменение контактной информации
+
+Отредактируйте компоненты:
+- `src/app/components/Footer.tsx` - контакты в футере
+- `src/app/components/HeroCarousel.tsx` - ссылки на Telegram
+- `src/app/components/CTASection.tsx` - кнопки CTA
+
+## 📦 Оптимизация для production
+
+Проект уже настроен для production с:
+- ✅ Standalone режим для уменьшения размера
+- ✅ React Strict Mode
+- ✅ Сжатие ответов
+- ✅ Оптимизация изображений
+- ✅ Удаление X-Powered-By заголовка
+
+## 🤝 Поддержка
+
+Для вопросов и поддержки:
+- Email: info@autosapiens.by
+- Telegram: @artmartinv
+- Telegram Bot: @AutoSapiens_bot
+
+## 📄 Лицензия
+
+© 2025 AutoSapiens - All Rights Reserved

@@ -131,6 +131,19 @@ export default function HeroCarousel() {
             padding: '0 2rem'
           }}>
             <div style={{
+              fontSize: '1.5rem',
+              fontWeight: 700,
+              letterSpacing: '0.05em',
+              textTransform: 'uppercase',
+              marginBottom: '2.5rem',
+              color: 'var(--white)',
+              textShadow: '0 4px 12px rgba(0, 0, 0, 0.5)',
+              display: 'inline-block'
+            }}>
+              Примеры автоматизаций для бизнеса:
+            </div>
+            
+            <div style={{
               backgroundColor: 'rgba(255, 255, 255, 0.1)',
               borderRadius: '50%',
               width: '120px',
@@ -171,6 +184,41 @@ export default function HeroCarousel() {
               justifyContent: 'center',
               flexWrap: 'wrap'
             }}>
+              <a 
+                href="/chat"
+                className="btn-primary"
+                style={{
+                  backgroundColor: 'rgba(255, 255, 255, 0.95)',
+                  color: 'var(--primary-base)',
+                  border: '2px solid rgba(255, 255, 255, 0.3)',
+                  textDecoration: 'none',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                  padding: '1rem 2rem',
+                  fontSize: '1.1rem',
+                  fontWeight: 600,
+                  borderRadius: '50px',
+                  backdropFilter: 'blur(10px)',
+                  transition: 'all 0.3s ease'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = 'var(--white)';
+                  e.currentTarget.style.transform = 'translateY(-2px)';
+                  e.currentTarget.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.2)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
+              >
+                <span>ЗАДАТЬ ВОПРОС</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h4l4 4 4-4h4c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+                </svg>
+              </a>
+              
               <a 
                 href="http://t.me/AutoSapiens_bot" 
                 target="_blank" 

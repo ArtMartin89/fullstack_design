@@ -24,6 +24,27 @@ export default function CTASection() {
           marginTop: '2rem'
         }}>
           <a 
+            href="/chat"
+            className="btn-primary"
+            style={{
+              backgroundColor: 'var(--white)',
+              color: 'var(--primary-base)',
+              textDecoration: 'none',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+              padding: '0.75rem 2rem',
+              fontSize: '1.1rem',
+              fontWeight: 600
+            }}
+          >
+            <span>ЗАДАТЬ ВОПРОС</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h4l4 4 4-4h4c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+            </svg>
+          </a>
+          
+          <a 
             href="https://t.me/artmartinv" 
             target="_blank"
             className="btn-primary"
