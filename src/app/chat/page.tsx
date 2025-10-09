@@ -21,6 +21,18 @@ export default function ChatPage() {
   ]);
   const [inputText, setInputText] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [sessionId] = useState(() => {
+    // Генерируем уникальный ID сессии при первой загрузке
+    if (typeof window !== 'undefined') {
+      let id = localStorage.getItem('chatSessionId');
+      if (!id) {
+        id = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+        localStorage.setItem('chatSessionId', id);
+      }
+      return id;
+    }
+    return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  });
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -54,15 +66,49 @@ export default function ChatPage() {
         },
         body: JSON.stringify({
           message: inputText,
+          sessionId: sessionId,
+          chatId: sessionId,
+          userId: sessionId,
           timestamp: new Date().toISOString()
         })
       });
 
+      console.log('Response status:', response.status);
+      console.log('Response headers:', response.headers);
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
       const data = await response.json();
+      console.log('Response from n8n:', data);
+      
+      // Пробуем разные варианты структуры ответа от n8n
+      let responseText = '';
+      
+      if (typeof data === 'string') {
+        responseText = data;
+      } else if (data.output) {
+        responseText = data.output;
+      } else if (data.response) {
+        responseText = data.response;
+      } else if (data.message) {
+        responseText = data.message;
+      } else if (data.text) {
+        responseText = data.text;
+      } else if (data.data && data.data.output) {
+        responseText = data.data.output;
+      } else if (Array.isArray(data) && data.length > 0) {
+        // Если массив, берем первый элемент
+        const firstItem = data[0];
+        responseText = firstItem.output || firstItem.response || firstItem.message || firstItem.text || JSON.stringify(firstItem);
+      } else {
+        responseText = JSON.stringify(data);
+      }
       
       const botMessage: Message = {
         id: (Date.now() + 1).toString(),
-        text: data.response || data.message || 'Извините, произошла ошибка. Попробуйте еще раз.',
+        text: responseText || 'Извините, произошла ошибка. Попробуйте еще раз.',
         sender: 'bot',
         timestamp: new Date()
       };
