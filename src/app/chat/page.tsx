@@ -83,10 +83,12 @@ export default function ChatPage() {
       const data = await response.json();
       console.log('Response from n8n:', data);
       
-      // Пробуем разные варианты структуры ответа от n8n
+      // Извлекаем текст ответа из поля reply
       let responseText = '';
       
-      if (typeof data === 'string') {
+      if (data.reply) {
+        responseText = data.reply;
+      } else if (typeof data === 'string') {
         responseText = data;
       } else if (data.output) {
         responseText = data.output;
@@ -96,14 +98,8 @@ export default function ChatPage() {
         responseText = data.message;
       } else if (data.text) {
         responseText = data.text;
-      } else if (data.data && data.data.output) {
-        responseText = data.data.output;
-      } else if (Array.isArray(data) && data.length > 0) {
-        // Если массив, берем первый элемент
-        const firstItem = data[0];
-        responseText = firstItem.output || firstItem.response || firstItem.message || firstItem.text || JSON.stringify(firstItem);
       } else {
-        responseText = JSON.stringify(data);
+        responseText = 'Извините, не удалось получить ответ.';
       }
       
       const botMessage: Message = {
