@@ -67,8 +67,7 @@ export default function CTASection() {
           </a>
           
           <a 
-            href="http://t.me/AutoSapiens_bot" 
-            target="_blank"
+            href="/chat"
             className="btn-secondary"
             style={{
               backgroundColor: 'transparent',
