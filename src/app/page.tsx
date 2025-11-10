@@ -3,6 +3,7 @@ import FeaturesSection from './components/FeaturesSection';
 import TimelineSection from './components/TimelineSection';
 import FAQSection from './components/FAQSection';
 import CTASection from './components/CTASection';
+import BonusSection from './components/BonusSection';
 import Footer from './components/Footer';
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <TimelineSection />
       <FAQSection />
       <CTASection />
+      <BonusSection />
       <Footer />
     </main>
   );
