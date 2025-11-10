@@ -38,7 +38,7 @@ export default function CTASection() {
               fontWeight: 600
             }}
           >
-            <span>ЗАДАТЬ ВОПРОС</span>
+            <span>ЗАДАТЬ ВОПРОС ИИ</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
               <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h4l4 4 4-4h4c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
             </svg>
@@ -60,13 +60,14 @@ export default function CTASection() {
               fontWeight: 600
             }}
           >
-            <span>ЗАКАЗАТЬ</span>
+            <span>ЗАКАЗАТЬ АВТОМАТИЗАЦИЮ</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
               <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
             </svg>
           </a>
           
-          <a 
+          {/*
+           <a 
             href="/chat"
             className="btn-secondary"
             style={{
@@ -87,6 +88,7 @@ export default function CTASection() {
               <path d="M8 5v14l11-7z"/>
             </svg>
           </a>
+          */}
         </div>
       </div>
     </section>
