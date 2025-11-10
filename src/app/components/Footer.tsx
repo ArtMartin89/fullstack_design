@@ -84,13 +84,21 @@ export default function Footer() {
               Контакты
             </h5>
             <div style={{
-              color: 'var(--text-muted)',
-              fontSize: '0.9rem',
-              lineHeight: 1.6
+              color: 'rgba(255, 255, 255, 0.92)',
+              fontSize: '0.95rem',
+              lineHeight: 1.8,
+              fontWeight: 500,
+              textShadow: '0 0 4px rgba(0, 0, 0, 0.18)'
             }}>
-              <p>Email: info@autosapiens.by</p>
-              <p>Телефон: +375 29 7055015</p>
-              <p>Telegram: @artmartinv</p>
+              <p style={{ color: 'rgba(255, 255, 255, 0.95)' }}>
+                Email: <a href="mailto:info@autosapiens.by" style={{ color: 'rgba(255, 255, 255, 0.95)', textDecoration: 'none', borderBottom: '1px solid rgba(255, 255, 255, 0.7)' }}>info@autosapiens.by</a>
+              </p>
+              <p style={{ color: 'rgba(255, 255, 255, 0.95)' }}>
+                Телефон: <a href="tel:+375297055015" style={{ color: 'rgba(255, 255, 255, 0.95)', textDecoration: 'none', borderBottom: '1px solid rgba(255, 255, 255, 0.7)' }}>+375 29 7055015</a>
+              </p>
+              <p style={{ color: 'rgba(255, 255, 255, 0.95)' }}>
+                Telegram: <a href="https://t.me/artmartinv" target="_blank" style={{ color: 'rgba(255, 255, 255, 0.95)', textDecoration: 'none', borderBottom: '1px solid rgba(255, 255, 255, 0.7)' }}>@artmartinv</a>
+              </p>
             </div>
           </div>
 

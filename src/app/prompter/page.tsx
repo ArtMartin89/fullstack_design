@@ -21,7 +21,7 @@ export default function PrompterPage() {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: createMessageId(),
-      text: 'Здравствуйте! Я помогу вам узнать больше об автоматизации бизнес-процессов. Задайте мне любой вопрос!',
+      text: 'Я помогу вам сформулировать хороший промпт для нейросети. Напишите свой запрос',
       sender: 'bot',
       timestamp: new Date()
     }
