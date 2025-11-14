@@ -132,6 +132,7 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  text-transform: uppercase;
 }
 
 .btn-primary:hover {
@@ -158,11 +159,16 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  text-transform: uppercase;
 }
 
 .btn-secondary:hover {
   background-color: var(--primary-base);
   color: var(--white);
+}
+
+button {
+  text-transform: uppercase;
 }
 
 /* Cards */
